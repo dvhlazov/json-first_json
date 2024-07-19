@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+.container {
+    margin: 0 auto;
+    width: 80%;
+   
+}
+#title {
+    color: rgb(188, 199, 43);
+    font-size: 38px;
+}
+#text-content {
+    color: rgb(37, 170, 126);
+    font-size: 21px;
+}
+
+
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blinkTextCursor {
+    from { border-right-color: rgba(0, 0, 0, 0.75); }
+    to { border-right-color: transparent; }
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden; /* Ensures the content is hidden before animation */
+    border-right: 2px solid rgba(0, 0, 0, 0.75); /* Cursor effect */
+    white-space: nowrap; /* Keeps the text on a single line */
+    animation: 
+        typewriter 4s steps(50, end) 1s 1 normal both, /* Typing animation */
+        blinkTextCursor 500ms steps(50, end) infinite normal; /* Cursor blink animation */
+}
+
+.delayed {
+    animation-delay: 5s; /* Delay to start after the title animation */
+}
